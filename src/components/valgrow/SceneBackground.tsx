@@ -5,7 +5,10 @@ import ribbon from "@/assets/ribbon.png";
 import orb from "@/assets/orb.png";
 
 const PARTICLES = Array.from({ length: 46 }, (_, i) => {
-  const rand = (n: number) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+  const rand = (n: number) => {
+    const v = ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+    return Math.round(v * 1000) / 1000;
+  };
   return {
     left: rand(1) * 100,
     top: rand(2) * 100,
@@ -15,6 +18,7 @@ const PARTICLES = Array.from({ length: 46 }, (_, i) => {
     gold: rand(6) > 0.86,
   };
 });
+
 
 /**
  * Cinematic scroll-driven background: glossy floating geometry, volumetric
