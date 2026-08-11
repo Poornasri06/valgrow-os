@@ -213,7 +213,7 @@ export function SceneBackground({ progress }: { progress: number }) {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.78), oklch(0.14 0.02 300 / 0.92) 70%)",
+            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.55), oklch(0.13 0.02 300 / 0.8) 75%)",
         }}
       />
 
