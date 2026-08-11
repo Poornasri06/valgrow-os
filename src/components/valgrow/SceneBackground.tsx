@@ -199,7 +199,10 @@ export function SceneBackground({ progress }: { progress: number }) {
             width: particle.size,
             height: particle.size,
             animationDelay: `${particle.delay}s`,
-            background: particle.gold ? "var(--gold)" : "oklch(0.55 0.2 300)",
+            background: particle.gold ? "var(--gold)" : "oklch(1 0 0 / 0.9)",
+            boxShadow: particle.gold
+              ? "0 0 10px oklch(0.82 0.13 85 / 0.8)"
+              : "0 0 10px oklch(1 0 0 / 0.7)",
             transform: `translate3d(0, ${p * -300 * particle.depth}px, 0)`,
           }}
         />
@@ -210,9 +213,10 @@ export function SceneBackground({ progress }: { progress: number }) {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 20% 40%, oklch(0.99 0.005 305 / 0.82), transparent 60%)",
+            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.78), oklch(0.14 0.02 300 / 0.92) 70%)",
         }}
       />
+
     </div>
   );
 }
