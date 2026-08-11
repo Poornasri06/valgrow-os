@@ -73,29 +73,29 @@ export function SceneBackground({ progress }: { progress: number }) {
     >
       {/* volumetric light blooms */}
       <div
-        className="absolute -right-[15%] -top-[20%] h-[70vw] w-[70vw] rounded-full opacity-70 blur-[120px] will-change-transform"
+        className="absolute -right-[15%] -top-[20%] h-[70vw] w-[70vw] rounded-full opacity-60 blur-[120px] will-change-transform"
         style={{
           ...style.bloomA,
           background:
-            "radial-gradient(circle, oklch(0.72 0.19 305 / 0.55), transparent 65%)",
+            "radial-gradient(circle, oklch(0.62 0.24 300 / 0.55), transparent 65%)",
         }}
       />
       <div
-        className="absolute -bottom-[25%] -left-[20%] h-[65vw] w-[65vw] rounded-full opacity-60 blur-[130px] will-change-transform"
+        className="absolute -bottom-[25%] -left-[20%] h-[65vw] w-[65vw] rounded-full opacity-50 blur-[130px] will-change-transform"
         style={{
           ...style.bloomB,
           background:
-            "radial-gradient(circle, oklch(0.78 0.14 275 / 0.5), transparent 65%)",
+            "radial-gradient(circle, oklch(0.9 0.02 300 / 0.35), transparent 65%)",
         }}
       />
 
       {/* perspective data grid */}
       <div className="absolute inset-x-0 bottom-0 h-[80vh] origin-bottom will-change-transform" style={style.grid}>
         <div
-          className="h-full w-full opacity-40"
+          className="h-full w-full opacity-60"
           style={{
             backgroundImage:
-              "linear-gradient(to right, oklch(0.55 0.12 300 / 0.28) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.55 0.12 300 / 0.28) 1px, transparent 1px)",
+              "linear-gradient(to right, oklch(1 0 0 / 0.3) 1px, transparent 1px), linear-gradient(to bottom, oklch(1 0 0 / 0.3) 1px, transparent 1px)",
             backgroundSize: "72px 72px",
             maskImage: "radial-gradient(circle at 50% 40%, black, transparent 72%)",
           }}
@@ -111,8 +111,8 @@ export function SceneBackground({ progress }: { progress: number }) {
       >
         <defs>
           <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="oklch(0.6 0.22 300)" stopOpacity="0" />
-            <stop offset="50%" stopColor="oklch(0.6 0.22 300)" stopOpacity="0.9" />
+            <stop offset="0%" stopColor="oklch(1 0 0)" stopOpacity="0" />
+            <stop offset="50%" stopColor="oklch(1 0 0)" stopOpacity="0.95" />
             <stop offset="100%" stopColor="oklch(0.8 0.13 85)" stopOpacity="0" />
           </linearGradient>
         </defs>
@@ -126,12 +126,13 @@ export function SceneBackground({ progress }: { progress: number }) {
             d={d}
             fill="none"
             stroke="url(#stream)"
-            strokeWidth={1.4}
+            strokeWidth={1.6}
             strokeDasharray="10 18"
             style={{ animation: `dash-flow ${9 + i * 4}s linear infinite` }}
           />
         ))}
       </svg>
+
 
       {/* glossy geometry */}
       <img
@@ -198,7 +199,10 @@ export function SceneBackground({ progress }: { progress: number }) {
             width: particle.size,
             height: particle.size,
             animationDelay: `${particle.delay}s`,
-            background: particle.gold ? "var(--gold)" : "oklch(0.55 0.2 300)",
+            background: particle.gold ? "var(--gold)" : "oklch(1 0 0 / 0.9)",
+            boxShadow: particle.gold
+              ? "0 0 10px oklch(0.82 0.13 85 / 0.8)"
+              : "0 0 10px oklch(1 0 0 / 0.7)",
             transform: `translate3d(0, ${p * -300 * particle.depth}px, 0)`,
           }}
         />
@@ -209,9 +213,10 @@ export function SceneBackground({ progress }: { progress: number }) {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 20% 40%, oklch(0.99 0.005 305 / 0.82), transparent 60%)",
+            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.55), oklch(0.13 0.02 300 / 0.8) 75%)",
         }}
       />
+
     </div>
   );
 }
