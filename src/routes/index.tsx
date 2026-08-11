@@ -73,7 +73,7 @@ function Landing() {
     <div className="relative min-h-screen">
       <SceneBackground progress={progress} />
 
-      <header className="fixed inset-x-0 top-0 z-50">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/55 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <a href="#top" className="flex items-center gap-2.5">
             <span className="relative flex h-7 w-7 items-center justify-center">
