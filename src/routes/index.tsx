@@ -68,80 +68,122 @@ const FOUNDATION = [
 
 function Landing() {
   const progress = useScrollProgress();
+  const [menuOpen, setMenuOpen] = useState(false);
   useRevealOnScroll();
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <SceneBackground progress={progress} />
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/55 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <a href="#top" className="flex items-center gap-3">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3.5 sm:px-6 sm:py-5">
+          <a href="#top" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
             <img
               src={logoAsset.url}
               alt="ValGrow Labs logo"
               width={44}
               height={44}
-              className="h-11 w-11 rounded-full object-contain"
+              className="h-9 w-9 shrink-0 rounded-full object-contain sm:h-11 sm:w-11"
             />
-            <span className="flex flex-col leading-none">
-              <span className="font-display text-lg font-semibold tracking-tight">ValGrow Labs</span>
-              <span className="mt-1 text-[10px] font-medium tracking-[0.22em] text-muted-foreground uppercase">
+            <span className="flex min-w-0 flex-col leading-none">
+              <span className="font-display truncate text-base font-semibold tracking-tight sm:text-lg">
+                ValGrow Labs
+              </span>
+              <span className="mt-1 truncate text-[9px] font-medium tracking-[0.22em] text-muted-foreground uppercase sm:text-[10px]">
                 Business OS
               </span>
             </span>
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
-            {NAV.map((item) => (
-              <a
-                key={item}
-                href="#top"
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="#top"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03]"
-          >
-            Get started
-          </a>
+          <div className="flex shrink-0 items-center gap-2 sm:gap-4">
+            <nav className="hidden items-center gap-8 md:flex">
+              {NAV.map((item) => (
+                <a
+                  key={item}
+                  href="#top"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+            <a
+              href="#top"
+              className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03] sm:inline-flex"
+            >
+              Get started
+            </a>
+            <button
+              type="button"
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="glass-panel grid h-10 w-10 shrink-0 place-items-center rounded-full md:hidden"
+            >
+              <span className="flex flex-col gap-1">
+                <span className="block h-0.5 w-4 rounded-full bg-foreground" />
+                <span className="block h-0.5 w-4 rounded-full bg-foreground" />
+                <span className="block h-0.5 w-4 rounded-full bg-foreground" />
+              </span>
+            </button>
+          </div>
         </div>
+
+        {menuOpen && (
+          <nav className="border-t border-border/40 px-4 pb-5 pt-3 md:hidden">
+            <div className="flex flex-col">
+              {NAV.map((item) => (
+                <a
+                  key={item}
+                  href="#top"
+                  onClick={() => setMenuOpen(false)}
+                  className="border-b border-border/30 py-3 text-sm text-muted-foreground"
+                >
+                  {item}
+                </a>
+              ))}
+              <a
+                href="#top"
+                onClick={() => setMenuOpen(false)}
+                className="mt-4 rounded-full bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground"
+              >
+                Get started
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
 
       <main id="top">
         {/* HERO */}
-        <section className="flex min-h-screen items-center px-6">
+        <section className="flex min-h-screen items-center px-5 pt-24 pb-16 sm:px-6 sm:pt-28">
           <div className="mx-auto w-full max-w-7xl">
             <div className="max-w-2xl">
-              <span className="glass-panel inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+              <span className="glass-panel inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-muted-foreground uppercase sm:px-4 sm:text-xs">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 Cloud-native · AI-powered
               </span>
-              <h1 className="text-aurora mt-7 text-5xl leading-[1.02] font-semibold sm:text-6xl lg:text-7xl">
+              <h1 className="text-aurora mt-6 text-[2.15rem] leading-[1.06] font-semibold sm:mt-7 sm:text-6xl lg:text-7xl">
                 One Business.
                 <br />
                 One Platform.
                 <br />
                 Infinite Possibilities.
               </h1>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
                 ValGrow Business OS unifies POS, inventory, sales, purchasing, accounting, HR,
                 ecommerce and AI into one intelligent operating system for your entire company.
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href="#ecosystem"
-                  className="rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
+                  className="rounded-full bg-primary px-7 py-3.5 text-center text-sm font-medium text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
                 >
                   Explore the OS
                 </a>
                 <a
                   href="#intelligence"
-                  className="glass-panel rounded-full px-7 py-3.5 text-sm font-medium transition-transform hover:scale-[1.03]"
+                  className="glass-panel rounded-full px-7 py-3.5 text-center text-sm font-medium transition-transform hover:scale-[1.03]"
                 >
                   See ValGrow AI
                 </a>
