@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SceneBackground } from "@/components/valgrow/SceneBackground";
 import { useRevealOnScroll, useScrollProgress } from "@/hooks/use-scroll-progress";
