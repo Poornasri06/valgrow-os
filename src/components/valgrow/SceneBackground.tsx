@@ -12,7 +12,7 @@ const PARTICLES = Array.from({ length: 46 }, (_, i) => {
   return {
     left: rand(1) * 100,
     top: rand(2) * 100,
-    size: 1.5 + rand(3) * 3.5,
+    size: 2 + rand(3) * 4,
     depth: 0.3 + rand(4) * 1.4,
     delay: rand(5) * 8,
     gold: rand(6) > 0.86,
@@ -60,7 +60,7 @@ export function SceneBackground({ progress }: { progress: number }) {
       },
       streams: {
         transform: `translate3d(0, ${p * -180}px, 0)`,
-        opacity: 0.35 + p * 0.4,
+        opacity: 0.75 + p * 0.25,
       },
     }),
     [p],
@@ -92,10 +92,10 @@ export function SceneBackground({ progress }: { progress: number }) {
       {/* perspective data grid */}
       <div className="absolute inset-x-0 bottom-0 h-[80vh] origin-bottom will-change-transform" style={style.grid}>
         <div
-          className="h-full w-full opacity-60"
+          className="h-full w-full opacity-90"
           style={{
             backgroundImage:
-              "linear-gradient(to right, oklch(1 0 0 / 0.3) 1px, transparent 1px), linear-gradient(to bottom, oklch(1 0 0 / 0.3) 1px, transparent 1px)",
+              "linear-gradient(to right, oklch(1 0 0 / 0.55) 1px, transparent 1px), linear-gradient(to bottom, oklch(1 0 0 / 0.55) 1px, transparent 1px)",
             backgroundSize: "72px 72px",
             maskImage: "radial-gradient(circle at 50% 40%, black, transparent 72%)",
           }}
@@ -126,7 +126,7 @@ export function SceneBackground({ progress }: { progress: number }) {
             d={d}
             fill="none"
             stroke="url(#stream)"
-            strokeWidth={1.6}
+            strokeWidth={2.4}
             strokeDasharray="10 18"
             style={{ animation: `dash-flow ${9 + i * 4}s linear infinite` }}
           />
@@ -202,7 +202,7 @@ export function SceneBackground({ progress }: { progress: number }) {
             background: particle.gold ? "var(--gold)" : "oklch(1 0 0 / 0.9)",
             boxShadow: particle.gold
               ? "0 0 10px oklch(0.82 0.13 85 / 0.8)"
-              : "0 0 10px oklch(1 0 0 / 0.7)",
+              : "0 0 14px oklch(1 0 0 / 0.95)",
             transform: `translate3d(0, ${p * -300 * particle.depth}px, 0)`,
           }}
         />
@@ -213,7 +213,7 @@ export function SceneBackground({ progress }: { progress: number }) {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.55), oklch(0.13 0.02 300 / 0.8) 75%)",
+            "radial-gradient(120% 90% at 20% 40%, oklch(0.16 0.022 300 / 0.25), oklch(0.13 0.02 300 / 0.5) 75%)",
         }}
       />
 
