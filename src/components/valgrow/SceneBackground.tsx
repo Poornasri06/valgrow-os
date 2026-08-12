@@ -102,36 +102,6 @@ export function SceneBackground({ progress }: { progress: number }) {
         />
       </div>
 
-      {/* flowing data streams */}
-      <svg
-        className="absolute inset-0 h-full w-full will-change-transform"
-        viewBox="0 0 1440 900"
-        preserveAspectRatio="xMidYMid slice"
-        style={style.streams}
-      >
-        <defs>
-          <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="oklch(1 0 0)" stopOpacity="0" />
-            <stop offset="50%" stopColor="oklch(1 0 0)" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="oklch(0.8 0.13 85)" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        {[
-          "M-100 640 C 320 560, 520 760, 900 600 S 1360 420, 1600 500",
-          "M-100 420 C 280 300, 640 520, 980 360 S 1380 240, 1600 300",
-          "M-100 820 C 380 780, 700 880, 1040 760 S 1420 660, 1600 700",
-        ].map((d, i) => (
-          <path
-            key={d}
-            d={d}
-            fill="none"
-            stroke="url(#stream)"
-            strokeWidth={2.4}
-            strokeDasharray="10 18"
-            style={{ animation: `dash-flow ${9 + i * 4}s linear infinite` }}
-          />
-        ))}
-      </svg>
 
 
       {/* glossy geometry */}
