@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SceneBackground } from "@/components/valgrow/SceneBackground";
 import { useRevealOnScroll, useScrollProgress } from "@/hooks/use-scroll-progress";
-import logoAsset from "@/assets/valgrow-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,7 +80,7 @@ function Landing() {
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3.5 sm:px-6 sm:py-5">
           <a href="#top" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
             <img
-              src={logoAsset.url}
+              src="/vg-logo.png"
               alt="ValGrow Labs logo"
               width={44}
               height={44}
