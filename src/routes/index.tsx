@@ -102,7 +102,7 @@ function Landing() {
                 <a
                   key={item}
                   href="#top"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="font-sans text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {item}
                 </a>
@@ -110,7 +110,7 @@ function Landing() {
             </nav>
             <a
               href="#top"
-              className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03] sm:inline-flex"
+              className="font-sans hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03] sm:inline-flex"
             >
               Get started
             </a>
@@ -164,7 +164,7 @@ function Landing() {
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 Cloud-native · AI-powered
               </span>
-              <h1 className="text-aurora mt-6 text-[2.15rem] leading-[1.06] font-semibold sm:mt-7 sm:text-6xl lg:text-7xl">
+              <h1 className="text-aurora mt-6 text-[2.15rem] leading-[1.06] font-bold tracking-[-0.03em] sm:mt-7 sm:text-6xl lg:text-7xl">
                 One Business.
                 <br />
                 One Platform.
@@ -178,13 +178,13 @@ function Landing() {
               <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href="#ecosystem"
-                  className="rounded-full bg-primary px-7 py-3.5 text-center text-sm font-medium text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
+                  className="font-sans rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
                 >
                   Explore the OS
                 </a>
                 <a
                   href="#intelligence"
-                  className="glass-panel rounded-full px-7 py-3.5 text-center text-sm font-medium transition-transform hover:scale-[1.03]"
+                  className="font-sans glass-panel rounded-full px-7 py-3.5 text-center text-sm font-semibold transition-transform hover:scale-[1.03]"
                 >
                   See ValGrow AI
                 </a>
@@ -312,9 +312,9 @@ function Landing() {
                   className="reveal-up glass-panel rounded-2xl p-5 sm:p-6"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <p className="text-sm text-muted-foreground">{metric.label}</p>
-                  <p className="font-display mt-2 text-2xl font-semibold sm:text-3xl">{metric.value}</p>
-                  <p className="mt-1 text-xs font-medium text-primary">{metric.delta}</p>
+                  <p className="font-sans text-sm text-muted-foreground">{metric.label}</p>
+                  <p className="font-display mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{metric.value}</p>
+                  <p className="font-sans mt-1 text-xs font-semibold text-primary">{metric.delta}</p>
                 </div>
               ))}
             </div>
@@ -364,7 +364,7 @@ function Landing() {
             <p className="mt-2 text-base font-medium sm:text-lg">Run your entire business with intelligence.</p>
             <a
               href="#top"
-              className="mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 sm:mt-10 sm:px-8 sm:py-4 text-sm font-medium text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
+              className="font-sans mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 sm:mt-10 sm:px-8 sm:py-4 text-sm font-semibold text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
             >
               Get started with ValGrow
             </a>
