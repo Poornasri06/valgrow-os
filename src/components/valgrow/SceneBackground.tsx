@@ -73,19 +73,19 @@ export function SceneBackground({ progress }: { progress: number }) {
     >
       {/* volumetric light blooms */}
       <div
-        className="absolute -right-[15%] -top-[20%] h-[70vw] w-[70vw] rounded-full opacity-60 blur-[120px] will-change-transform"
+        className="absolute -right-[15%] -top-[20%] h-[70vw] w-[70vw] rounded-full opacity-70 blur-[120px] will-change-transform"
         style={{
           ...style.bloomA,
           background:
-            "radial-gradient(circle, oklch(0.62 0.24 300 / 0.55), transparent 65%)",
+            "radial-gradient(circle, oklch(0.68 0.22 300 / 0.62), transparent 65%)",
         }}
       />
       <div
-        className="absolute -bottom-[25%] -left-[20%] h-[65vw] w-[65vw] rounded-full opacity-50 blur-[130px] will-change-transform"
+        className="absolute -bottom-[25%] -left-[20%] h-[65vw] w-[65vw] rounded-full opacity-60 blur-[130px] will-change-transform"
         style={{
           ...style.bloomB,
           background:
-            "radial-gradient(circle, oklch(0.9 0.02 300 / 0.35), transparent 65%)",
+            "radial-gradient(circle, oklch(0.92 0.03 300 / 0.42), transparent 65%)",
         }}
       />
 
