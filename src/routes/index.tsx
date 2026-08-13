@@ -53,10 +53,10 @@ const AI_QUESTIONS = [
 ];
 
 const METRICS = [
-  { label: "Revenue", value: "₹4.28M", delta: "+18.4%" },
-  { label: "Gross profit", value: "₹1.61M", delta: "+9.2%" },
-  { label: "Inventory value", value: "₹2.05M", delta: "-3.1%" },
-  { label: "Cash flow", value: "₹880K", delta: "+22.6%" },
+  { label: "Revenue", value: "LKR 4.28M", delta: "+18.4%" },
+  { label: "Gross profit", value: "LKR 1.61M", delta: "+9.2%" },
+  { label: "Inventory value", value: "LKR 2.05M", delta: "-3.1%" },
+  { label: "Cash flow", value: "LKR 880K", delta: "+22.6%" },
 ];
 
 const NODES = ["Branch 01", "Branch 02", "Branch 03", "Warehouse", "Online Store"];
@@ -157,7 +157,7 @@ function Landing() {
 
       <main id="top">
         {/* HERO */}
-        <section className="flex min-h-screen items-center px-5 pt-14 pb-12 sm:px-6 sm:pt-28 sm:pb-16">
+        <section className="flex min-h-[80vh] items-start px-5 pt-6 pb-12 sm:min-h-screen sm:items-center sm:px-6 sm:pt-28 sm:pb-16">
           <div className="mx-auto w-full max-w-7xl">
             <div className="max-w-2xl">
               <span className="glass-panel inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-muted-foreground uppercase sm:px-4 sm:text-xs">
