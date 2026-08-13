@@ -194,7 +194,7 @@ function Landing() {
         </section>
 
         {/* ECOSYSTEM */}
-        <section id="ecosystem" className="px-5 py-16 sm:px-6 sm:py-28">
+        <section id="ecosystem" className="px-5 py-12 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
               <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
@@ -224,7 +224,7 @@ function Landing() {
         </section>
 
         {/* FLOWS */}
-        <section className="px-5 py-16 sm:px-6 sm:py-28">
+        <section className="px-5 py-12 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
               <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
@@ -260,7 +260,7 @@ function Landing() {
         </section>
 
         {/* AI */}
-        <section id="intelligence" className="px-5 py-16 sm:px-6 sm:py-28">
+        <section id="intelligence" className="px-5 py-12 sm:px-6 sm:py-28">
           <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-14">
             <div data-reveal className="reveal-up">
               <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
@@ -294,7 +294,7 @@ function Landing() {
         </section>
 
         {/* ANALYTICS + MULTI BRANCH */}
-        <section className="px-5 py-16 sm:px-6 sm:py-28">
+        <section className="px-5 py-12 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
               <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
@@ -336,7 +336,7 @@ function Landing() {
         </section>
 
         {/* FOUNDATION */}
-        <section className="px-5 py-16 sm:px-6 sm:py-28">
+        <section className="px-5 py-12 sm:px-6 sm:py-28">
           <div className="mx-auto grid max-w-7xl gap-3 sm:gap-4 lg:grid-cols-3">
             {FOUNDATION.map((item, i) => (
               <div
@@ -353,7 +353,7 @@ function Landing() {
         </section>
 
         {/* FINALE */}
-        <section className="flex min-h-screen items-center px-5 py-16 text-center sm:px-6">
+        <section className="flex items-center px-5 py-16 text-center sm:min-h-screen sm:px-6">
           <div data-reveal className="reveal-up mx-auto max-w-3xl">
             <h2 className="text-aurora font-display text-[2.4rem] leading-[1.05] font-semibold sm:text-6xl lg:text-7xl">
               VALGROW
