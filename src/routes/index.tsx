@@ -157,7 +157,7 @@ function Landing() {
 
       <main id="top">
         {/* HERO */}
-        <section className="flex min-h-[80vh] items-start px-5 pt-6 pb-12 sm:min-h-screen sm:items-center sm:px-6 sm:pt-28 sm:pb-16">
+        <section className="relative flex items-start px-5 pt-20 pb-10 sm:min-h-screen sm:items-center sm:px-6 sm:pt-28 sm:pb-16">
           <div className="mx-auto w-full max-w-7xl">
             <div className="max-w-2xl">
               <span className="glass-panel inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-muted-foreground uppercase sm:px-4 sm:text-xs">
