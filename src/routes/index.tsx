@@ -87,10 +87,10 @@ function Landing() {
               className="h-9 w-9 shrink-0 rounded-full object-contain sm:h-11 sm:w-11"
             />
             <span className="flex min-w-0 flex-col leading-none">
-              <span className="font-display truncate text-base font-semibold tracking-tight sm:text-lg">
+              <span className="font-display truncate text-base font-[600] tracking-[-0.02em] sm:text-lg">
                 ValGrow Labs
               </span>
-              <span className="mt-1 truncate text-[9px] font-medium tracking-[0.22em] text-muted-foreground uppercase sm:text-[10px]">
+              <span className="mt-1 truncate text-[9px] font-sans font-medium tracking-[0.22em] text-muted-foreground uppercase sm:text-[10px]">
                 Business OS
               </span>
             </span>
@@ -102,7 +102,7 @@ function Landing() {
                 <a
                   key={item}
                   href="#top"
-                  className="font-sans text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="font-sans text-sm font-[500] text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {item}
                 </a>
@@ -110,7 +110,7 @@ function Landing() {
             </nav>
             <a
               href="#top"
-              className="font-sans hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03] sm:inline-flex"
+              className="hidden rounded-full bg-primary px-5 py-2.5 font-sans text-sm font-[600] text-primary-foreground shadow-[0_12px_30px_-12px_oklch(0.5_0.22_300/0.9)] transition-transform hover:scale-[1.03] sm:inline-flex"
             >
               Get started
             </a>
@@ -138,7 +138,7 @@ function Landing() {
                   key={item}
                   href="#top"
                   onClick={() => setMenuOpen(false)}
-                  className="border-b border-border/30 py-3 text-sm text-muted-foreground"
+                  className="font-sans border-b border-border/30 py-3 text-sm font-[500] text-muted-foreground"
                 >
                   {item}
                 </a>
@@ -146,7 +146,7 @@ function Landing() {
               <a
                 href="#top"
                 onClick={() => setMenuOpen(false)}
-                className="mt-4 rounded-full bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground"
+                className="font-sans mt-4 rounded-full bg-primary px-5 py-3 text-center text-sm font-[600] text-primary-foreground"
               >
                 Get started
               </a>
@@ -160,31 +160,31 @@ function Landing() {
         <section className="relative flex items-start px-5 pt-[calc(4.5rem+clamp(0.5rem,4vw,3.5rem))] pb-[clamp(2rem,6vw,5rem)] sm:items-center sm:px-6">
           <div className="mx-auto w-full max-w-7xl">
             <div className="max-w-2xl">
-              <span className="glass-panel inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-muted-foreground uppercase sm:px-4 sm:text-xs">
+              <span className="glass-panel inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[10px] font-sans font-[500] tracking-wide text-muted-foreground uppercase sm:px-4 sm:text-xs">
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 Cloud-native · AI-powered
               </span>
-              <h1 className="text-aurora mt-6 text-[2.15rem] leading-[1.06] font-bold tracking-[-0.03em] sm:mt-7 sm:text-6xl lg:text-7xl">
+              <h1 className="text-aurora font-display mt-6 font-[700] leading-[1.05] tracking-[-0.03em] [font-size:clamp(2.1rem,6.5vw,4.5rem)] sm:mt-7">
                 One Business.
                 <br />
                 One Platform.
                 <br />
                 Infinite Possibilities.
               </h1>
-              <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
+              <p className="font-sans mt-5 max-w-lg text-sm font-[400] leading-[1.65] text-muted-foreground sm:mt-6 sm:text-[1.05rem]">
                 ValGrow Business OS unifies POS, inventory, sales, purchasing, accounting, HR,
                 ecommerce and AI into one intelligent operating system for your entire company.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href="#ecosystem"
-                  className="font-sans rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
+                  className="font-sans rounded-full bg-primary px-7 py-3.5 text-center text-sm font-[600] text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
                 >
                   Explore the OS
                 </a>
                 <a
                   href="#intelligence"
-                  className="font-sans glass-panel rounded-full px-7 py-3.5 text-center text-sm font-semibold transition-transform hover:scale-[1.03]"
+                  className="font-sans glass-panel rounded-full px-7 py-3.5 text-center text-sm font-[600] transition-transform hover:scale-[1.03]"
                 >
                   See ValGrow AI
                 </a>
@@ -197,10 +197,10 @@ function Landing() {
         <section id="ecosystem" className="px-5 py-[clamp(2.5rem,6vw,7rem)] sm:px-6">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
-              <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
+              <p className="font-sans text-[10px] font-[600] tracking-[0.2em] text-primary uppercase sm:text-xs">
                 The ecosystem
               </p>
-              <h2 className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-4xl lg:text-5xl">
+              <h2 className="font-display mt-3 font-[600] leading-[1.1] tracking-[-0.025em] [font-size:clamp(1.5rem,3.5vw,3rem)] sm:mt-4">
                 Every part of your business, connected.
               </h2>
             </div>
@@ -212,11 +212,11 @@ function Landing() {
                   className="reveal-up glass-panel rounded-2xl p-5 transition-transform duration-500 hover:-translate-y-1.5 sm:p-6"
                   style={{ transitionDelay: `${i * 70}ms` }}
                 >
-                  <span className="font-display text-xs text-muted-foreground">
+                  <span className="font-display text-xs font-[500] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-3 text-xl font-semibold">{module.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{module.line}</p>
+                  <h3 className="font-display mt-3 text-xl font-[600] tracking-[-0.02em]">{module.name}</h3>
+                  <p className="font-sans mt-2 text-sm font-[400] leading-[1.6] text-muted-foreground">{module.line}</p>
                 </article>
               ))}
             </div>
@@ -227,10 +227,10 @@ function Landing() {
         <section className="px-5 py-[clamp(2.5rem,6vw,7rem)] sm:px-6">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
-              <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
+              <p className="font-sans text-[10px] font-[600] tracking-[0.2em] text-primary uppercase sm:text-xs">
                 Living data
               </p>
-              <h2 className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-4xl lg:text-5xl">
+              <h2 className="font-display mt-3 font-[600] leading-[1.1] tracking-[-0.025em] [font-size:clamp(1.5rem,3.5vw,3rem)] sm:mt-4">
                 One action moves the whole system.
               </h2>
             </div>
@@ -242,7 +242,7 @@ function Landing() {
                   className="reveal-up glass-panel flex flex-wrap items-center gap-x-2 gap-y-2 rounded-2xl px-4 py-4 sm:gap-x-3 sm:gap-y-3 sm:px-6 sm:py-5"
                   style={{ transitionDelay: `${i * 110}ms` }}
                 >
-                  <span className="basis-full text-sm font-semibold sm:mr-2 sm:min-w-32 sm:basis-auto">{flow.label}</span>
+                  <span className="font-sans basis-full text-sm font-[600] sm:mr-2 sm:min-w-32 sm:basis-auto">{flow.label}</span>
                   {flow.chain.map((step, index) => (
                     <span key={step} className="flex items-center gap-2 sm:gap-3">
                       <span className="rounded-full bg-secondary px-3 py-1.5 text-xs text-secondary-foreground sm:px-4 sm:text-sm">
@@ -263,13 +263,13 @@ function Landing() {
         <section id="intelligence" className="px-5 py-[clamp(2.5rem,6vw,7rem)] sm:px-6">
           <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-14">
             <div data-reveal className="reveal-up">
-              <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
+              <p className="font-sans text-[10px] font-[600] tracking-[0.2em] text-primary uppercase sm:text-xs">
                 ValGrow AI
               </p>
-              <h2 className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-4xl lg:text-5xl">
+              <h2 className="font-display mt-3 font-[600] leading-[1.1] tracking-[-0.025em] [font-size:clamp(1.5rem,3.5vw,3rem)] sm:mt-4">
                 An assistant that understands your entire business.
               </h2>
-              <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
+              <p className="font-sans mt-4 max-w-md text-sm font-[400] leading-[1.65] text-muted-foreground sm:mt-6 sm:text-[1rem]">
                 Ask in plain language. ValGrow reads sales, stock, costs and people together, then
                 explains what happened and what happens next.
               </p>
@@ -282,8 +282,8 @@ function Landing() {
                   className="reveal-up glass-panel rounded-2xl p-5"
                   style={{ transitionDelay: `${i * 110}ms` }}
                 >
-                  <p className="text-sm font-medium">{item.q}</p>
-                  <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+                  <p className="font-sans text-sm font-[500]">{item.q}</p>
+                  <p className="font-sans mt-2 flex items-center gap-2 text-sm font-[400] text-muted-foreground">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                     {item.a}
                   </p>
@@ -297,10 +297,10 @@ function Landing() {
         <section className="px-5 py-[clamp(2.5rem,6vw,7rem)] sm:px-6">
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="reveal-up max-w-xl">
-              <p className="text-[10px] font-semibold tracking-[0.2em] text-primary uppercase sm:text-xs">
+              <p className="font-sans text-[10px] font-[600] tracking-[0.2em] text-primary uppercase sm:text-xs">
                 Real-time analytics
               </p>
-              <h2 className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-4xl lg:text-5xl">
+              <h2 className="font-display mt-3 font-[600] leading-[1.1] tracking-[-0.025em] [font-size:clamp(1.5rem,3.5vw,3rem)] sm:mt-4">
                 One business. Every branch connected.
               </h2>
             </div>
@@ -312,9 +312,9 @@ function Landing() {
                   className="reveal-up glass-panel rounded-2xl p-5 sm:p-6"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <p className="font-sans text-sm text-muted-foreground">{metric.label}</p>
-                  <p className="font-display mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{metric.value}</p>
-                  <p className="font-sans mt-1 text-xs font-semibold text-primary">{metric.delta}</p>
+                  <p className="font-sans text-sm font-[400] text-muted-foreground">{metric.label}</p>
+                  <p className="font-display mt-2 font-[600] tracking-[-0.02em] [font-size:clamp(1.4rem,2.5vw,1.875rem)]">{metric.value}</p>
+                  <p className="font-sans mt-1 text-xs font-[500] text-primary">{metric.delta}</p>
                 </div>
               ))}
             </div>
@@ -345,8 +345,8 @@ function Landing() {
                 className="reveal-up glass-panel rounded-2xl p-6 sm:p-8"
                 style={{ transitionDelay: `${i * 90}ms` }}
               >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.line}</p>
+                <h3 className="font-display text-xl font-[600] tracking-[-0.02em]">{item.title}</h3>
+                <p className="font-sans mt-3 text-sm font-[400] leading-[1.65] text-muted-foreground">{item.line}</p>
               </div>
             ))}
           </div>
@@ -355,16 +355,16 @@ function Landing() {
         {/* FINALE */}
         <section className="flex items-center px-5 py-[clamp(3rem,8vw,8rem)] text-center sm:px-6">
           <div data-reveal className="reveal-up mx-auto max-w-3xl">
-            <h2 className="text-aurora font-display text-[2.4rem] leading-[1.05] font-semibold sm:text-6xl lg:text-7xl">
+            <h2 className="text-aurora font-display font-[700] leading-[1.04] tracking-[-0.03em] [font-size:clamp(2.4rem,7vw,5rem)]">
               VALGROW
               <br />
               BUSINESS OS
             </h2>
-            <p className="mt-6 text-base text-muted-foreground sm:mt-8 sm:text-lg">One Platform. Every Business Function.</p>
-            <p className="mt-2 text-base font-medium sm:text-lg">Run your entire business with intelligence.</p>
+            <p className="font-sans mt-6 text-base font-[400] leading-[1.6] text-muted-foreground sm:mt-8 sm:text-lg">One Platform. Every Business Function.</p>
+            <p className="font-sans mt-2 text-base font-[500] sm:text-lg">Run your entire business with intelligence.</p>
             <a
               href="#top"
-              className="font-sans mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 sm:mt-10 sm:px-8 sm:py-4 text-sm font-semibold text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
+              className="font-sans mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 sm:mt-10 sm:px-8 sm:py-4 text-sm font-[600] text-primary-foreground shadow-[0_18px_40px_-16px_oklch(0.5_0.22_300/0.95)] transition-transform hover:scale-[1.03]"
             >
               Get started with ValGrow
             </a>
@@ -373,7 +373,7 @@ function Landing() {
       </main>
 
       <footer className="border-t border-border/60 px-5 py-7 sm:px-6 sm:py-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-3 sm:text-sm">
+        <div className="font-sans mx-auto flex max-w-7xl flex-col gap-2 text-xs font-[400] text-muted-foreground sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-3 sm:text-sm">
           <span>© {new Date().getFullYear()} ValGrow Business OS</span>
           <span>One Business. One Platform. Infinite Possibilities.</span>
         </div>
